@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau lenh switch case</title>
+    <script>
+        function soNgay() {
+            let a = parseInt(document.getElementById("thang").value);
+            switch (a) {
+                case 1 :
+                case 3 :
+                case 5 :
+                case 7 :
+                case 8 :
+                case 10 :
+                case 12 :
+                    document.getElementById("demo").innerText= "tháng " + a + " có 31 ngày";break;
+                case 4 :
+                case 6 :
+                case 9 :
+                case 11 :
+                    document.getElementById("demo").innerText= "tháng " + a + " có 30 ngày";break;
+                case 2 :
+                    document.getElementById("demo").innerText= "tháng 2 có 28 ngày";break;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    Tháng : <input id="thang" type="text">
+    <button type="button" onclick="soNgay()" >Tính số ngày</button>
+    <p id="demo"></p>
+</body>
+</html>
