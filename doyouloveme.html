@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do you love me</title>
+    <script>
+        function clickYes() {
+            alert("<3")
+        }
+        function hoverNo() {
+            let a = Math.round(Math.random() * window.innerHeight);
+            let b = Math.round(Math.random() * window.innerWidth);
+            document.getElementById("no").style.top  = a + "px";
+            document.getElementById("no").style.left = b + "px";
+        }
+    </script>
+</head>
+<body>
+    <h1 style="position: absolute;left: 520px;top : 250px">DO YOU LOVE ME?</h1>
+    <button type="button" id="yes" onclick="clickYes()" style="position: absolute;left: 600px;top: 320px">YES</button>&nbsp;&nbsp;
+    <button type="button" id="no" onmouseover="hoverNo()" style="position: absolute;left: 700px;top: 320px">NO</button>
+</body>
+</html>
