@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh don gian</title>
+<style>
+    th, td { text-align: center; padding : 3px}
+    button {width: 20px;height: 20px}
+</style>
+
+</head>
+<body>
+    <table style="border: 4px solid black" >
+        <tr>
+            <th colspan="4"><input type="text" id="manhinh"></th>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="toan_hang('1')">1</button> </td>
+            <td><button type="button" onclick="toan_hang('2')">2</button> </td>
+            <td><button type="button" onclick="toan_hang('3')">3</button> </td>
+            <td><button type="button" onclick="toan_tu('+')" >+</button> </td>
+
+        </tr>
+        <tr>
+            <td><button type="button" onclick="toan_hang('4')" >4</button> </td>
+            <td><button type="button" onclick="toan_hang('5')" >5</button> </td>
+            <td><button type="button" onclick="toan_hang('6')" >6</button> </td>
+            <td><button type="button" onclick="toan_tu('-')" >-</button> </td>
+
+        </tr>
+        <tr>
+            <td><button type="button" onclick="toan_hang('7')" >7</button> </td>
+            <td><button type="button" onclick="toan_hang('8')" >8</button> </td>
+            <td><button type="button" onclick="toan_hang('9')" >9</button> </td>
+            <td><button type="button" onclick="toan_tu('*')" >*</button> </td>
+
+        </tr>
+        <tr>
+            <td><button type="button" onclick="del()">C</button> </td>
+            <td><button type="button" onclick="toan_hang('0')" >0</button> </td>
+            <td><button type="button" onclick="tinh_toan()" >=</button> </td>
+            <td><button type="button" onclick="toan_tu('/')" >/</button> </td>
+
+        </tr>
+    </table>
+    <script>
+        let number1 = null , number2 = null, operator;
+        let inpValue = document.getElementById("manhinh");
+        let inp;
+        function toan_hang(value) {
+            inp = inpValue.value;
+            inp += value;
+            document.getElementById("manhinh").value = inp;
+        }
+        function toan_tu(value) {
+            number1=Number(inpValue.value);
+            document.getElementById("manhinh").value= "";
+            operator = value;
+        }
+        function tinh_toan() {
+            number2 = Number(inpValue.value);
+            switch (operator) {
+                case "+" :
+                    inp = number1 + number2;break;
+                case "-" :
+                    inp = number1 - number2;break;
+                case "*" :
+                    inp = number1*number2;break;
+                case "/" :
+                    inp = number1/number2;break;
+
+            }
+            document.getElementById("manhinh").value = inp;
+
+        }
+        function del() {
+            document.getElementById("manhinh").value = null;}
+
+    </script>
+</body>
+</html>
