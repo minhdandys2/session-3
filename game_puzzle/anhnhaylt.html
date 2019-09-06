@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi ảnh</title>
+</head>
+<body>
+        <img src="a1.jpg" id="anha" alt="1a" onclick="click1()"/><br>
+        <img src="b1.jpg" id="anhb" alt="1b" onclick="click2()"/><br>
+        <img src="c1.jpg" id="anhc" alt="1c" onclick="click3()"/><br>
+        <img src="d1.jpg" id="anhd" alt="1d" onclick="click4()"/><br>
+        <img src="e1.jpg" id="anhe" alt="1e" onclick="click5()"/>;
+    <script>
+        let imga = document.getElementById("anha");
+        let imgb = document.getElementById("anhb");
+        let imgc = document.getElementById("anhc");
+        let imgd = document.getElementById("anhd");
+        let imge = document.getElementById("anhe");
+        function click1() {
+            switch ( imga.alt) {
+                case ("1a") :
+                    imga.src = "a2.jpg";
+                    imga.alt = "2a";
+                    break;
+                case ("2a") :
+                    imga.src = "a3.jpg";
+                    imga.alt = "3a";
+                    break;
+                case ("3a") :
+                    imga.src = "a1.jpg";
+                    imga.alt = "1a";
+                    break;
+
+            }
+
+        }
+        function click2() {
+            if (imgb.alt == "1b") {
+                imgb.src = "b2.jpg";
+                imgb.alt="2b";
+            } else if (imgb.alt == "2b") {
+                imgb.src="b3.jpg";
+                imgb.alt="3b";
+            } else if (imgb.alt == "3b") {
+                imgb.src="b1.jpg";
+                imgb.alt="1b";
+            }
+
+        }
+        function click3() {
+            if (imgc.alt == "1c") {
+                imgc.src = "c2.jpg";
+                imgc.alt = "2c";
+            } else if (imgc.alt == "2c") {
+                imgc.src = "c3.jpg";
+                imgc.alt = "3c";
+            } else if (imgc.alt == "3c") {
+                imgc.src = "c1.jpg";
+                imgc.alt = "1c";
+            }
+        }
+            function click4() {
+                if (imgd.alt == "1d") {
+                    imgd.src = "d2.jpg";
+                    imgd.alt="2d";
+                } else if (imgd.alt == "2d") {
+                    imgd.src="d3.jpg";
+                    imgd.alt="3d";
+                } else if (imgd.alt == "3d") {
+                    imgd.src="d1.jpg";
+                    imgd.alt="1d";
+                }
+
+            }
+            function click5() {
+                if (imge.alt == "1e") {
+                    imge.src = "e2.jpg";
+                    imge.alt="2e";
+                } else if (imge.alt == "2e") {
+                    imge.src="e3.jpg";
+                    imge.alt="3e";
+                } else if (imge.alt == "3e") {
+                    imge.src="e1.jpg";
+                    imge.alt="1e";
+                }
+
+            }
+
+
+    </script>
+</body>
+</html>
