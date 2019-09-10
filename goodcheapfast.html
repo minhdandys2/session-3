@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>game good cheap fast</title>
+</head>
+<body>
+<input type="checkbox" id="good" onclick="checkedbox(this.id)">Good<br>
+<input type="checkbox" id="cheap" onclick="checkedbox(this.id)">Cheap<br>
+<input type="checkbox"id="fast" onclick="checkedbox(this.id)">Fast</input>
+<script>
+    let good = document.getElementById("good");
+    let fast = document.getElementById("fast");
+    let cheap = document.getElementById("cheap");
+
+    function checkedbox(eval) {
+        switch (eval) {
+            case "fast" :
+                if (fast.checked && cheap.checked) {
+                    good.checked = false;
+                }
+                break;
+            case "good" :
+                if (good.checked && fast.checked) {
+                    cheap.checked = false;
+                }
+                break;
+            case "cheap" :
+                if (cheap.checked && good.checked) {
+                    fast.checked = false;
+                }
+                break;
+        }
+    }
+</script>
+</body>
+</html>
