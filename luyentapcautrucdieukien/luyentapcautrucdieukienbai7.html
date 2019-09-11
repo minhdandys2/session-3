@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+    <script>
+        let phutgoi = parseInt(prompt("nhập số phút gọi : "));
+        let tien;
+        if (phutgoi <= 10) {
+            tien = phutgoi*600;
+        }else if (phutgoi > 10 && phutgoi <=30) {
+            tien = (10*600) + (phutgoi - 10)*400;
+        }else {
+            tien = (10*600) + (20*400) + (phutgoi - 30)*200;
+        }
+        alert("cước điện thoại là : "+tien+ " đồng")
+    </script>
+</body>
+</html>

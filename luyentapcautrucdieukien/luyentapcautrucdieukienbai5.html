@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+    <script>
+        let mieng = parseFloat(prompt("điểm miệng"));
+        let mottiet = parseFloat(prompt("điểm 1 tiết"));
+        let giuaki = parseFloat(prompt("điểm giữa kì"));
+        let cuoiki = parseFloat(prompt("điểm cuối kì"));
+        let diemtb = (mieng+mottiet*2+giuaki*3+cuoiki*3)/9;
+        if(diemtb >= 8) { alert("học lực giỏi")
+        }else if(diemtb>=6.5) {alert("học lực khá")}
+        else if(diemtb>=5) {alert("học lực trung bình")}
+        else {alert("học lực yếu")}
+    </script>
+</body>
+</html>
